@@ -93,31 +93,26 @@
       font-size: 15px;
       min-width: 500px;
     }
-    thead {
-      display: none; 
-    }
     tr {
       border-bottom: 1px solid #ddd;
     }
     tr:last-child {
       border-bottom: none;
     }
-    td {
+    th, td {
       padding: 12px 14px;
       vertical-align: middle;
     }
-    /* label column (left) - Updated for lighter appearance */
-    td:nth-child(1) {
-      font-weight: 400; /* Changed from 600 to 400 (normal weight) */
+    th {
+      font-weight: 400;
       background: #fafafa;
-      color: #4c4c4c; /* Changed from #3a3a3a to lighter gray */
+      color: #4c4c4c;
       border-right: 1px solid #eee;
       white-space: nowrap;
       width: 150px;
+      text-align: left;
     }
-
-    /* value column (right) */
-    td:nth-child(2) {
+    td {
       color: #222;
       word-break: break-word;
     }
@@ -125,9 +120,6 @@
     .ref-number {
       color: #4c4c4c;
       font-weight: 600;
-    }
-    .blurred-text {
-      filter: blur(2px);
     }
 
     /* Special formatting for green text fields */
@@ -195,13 +187,13 @@
         min-width: 400px;
       }
       
-      td:nth-child(1) {
+      th {
         white-space: nowrap;
         font-size: 14px;
         width: 140px;
         padding: 9px 10px;
       }
-      td:nth-child(2) {
+      td {
         padding: 9px 10px;
         font-size: 14px;
         min-width: 200px;
@@ -254,23 +246,23 @@
       <table role="table" aria-label="Reservation details">
         <tbody>
           <tr>
-            <td><strong>Ref. number</strong></td>
+            <th scope="row"><strong>Ref. number</strong></th>
             <td><strong class="ref-number">20250709815395</strong></td>
           </tr>
           <tr>
-            <td><strong>Stadium</strong></td>
+            <th scope="row"><strong>Stadium</strong></th>
             <td>Fitness & Performance Centre</td>
           </tr>
           <tr>
-            <td><strong>Facility</strong></td>
+            <th scope="row"><strong>Facility</strong></th>
             <td>Fitness & Performance Centre</td>
           </tr>
           <tr>
-            <td><strong>Court</strong></td>
+            <th scope="row"><strong>Court</strong></th>
             <td>room 1</td>
           </tr>
           <tr>
-            <td><strong>Requester</strong></td>
+            <th scope="row"><strong>Requester</strong></th>
             <td>
               <div class="requester-cell">
                 <div class="requester-left">
@@ -290,31 +282,31 @@
             </td>
           </tr>
           <tr>
-            <td><strong>Request from</strong></td>
+            <th scope="row"><strong>Request from</strong></th>
             <td>VSP - GIT - EECE</td>
           </tr>
           <tr>
-            <td><strong>Mobile</strong></td>
+            <th scope="row"><strong>Mobile</strong></th>
             <td><a href="tel:9493027486" style="color: #222; text-decoration: none;">9493027486</a></td>
           </tr>
           <tr>
-            <td><strong>E-mail</strong></td>
+            <th scope="row"><strong>E-mail</strong></th>
             <td><a href="mailto:sgadepal2@gitam.in" style="color: #222; text-decoration: none;">sgadepal2@gitam.in</a></td>
           </tr>
           <tr>
-            <td><strong>Reserved date</strong></td>
+            <th scope="row"><strong>Reserved date</strong></th>
             <td class="green-text">15-Jul-2025</td>
           </tr>
           <tr>
-            <td><strong>Reserved slot</strong></td>
+            <th scope="row"><strong>Reserved slot</strong></th>
             <td class="green-text">03:00 PM to 04:00 PM</td>
           </tr>
           <tr>
-            <td><strong>Status</strong></td>
+            <th scope="row"><strong>Status</strong></th>
             <td class="green-text approved">Approved</td>
           </tr>
           <tr>
-            <td><strong>Remarks</strong></td>
+            <th scope="row"><strong>Remarks</strong></th>
             <td>Approved</td>
           </tr>
         </tbody>
